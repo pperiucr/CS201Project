@@ -19,3 +19,14 @@ sudo wget https://github.com/llvm/llvm-project/releases/download/llvmorg-12.0.1/
 sudo tar -xf clang-12.0.1.src.tar.xz
 sudo mv clang-12.0.1.src clang/
 ```
+
+###  Build LLVM and Clang:
+```bash
+sudo mkdir build
+sudo mkdir install
+cd build
+sudo cmake -G "Unix Makefiles" -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_INSTALL_PREFIX=../install -DCMAKE_BUILD_TYPE=Release ../llvm
+sudo make -j 8 install
+clang --version
+opt -version
+```
