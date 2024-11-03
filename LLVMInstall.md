@@ -6,6 +6,7 @@ cd /mydata
 export MYMOUNT=/mydata
 sudo git clone https://github.com/pperiucr/CS201Project.git
 cd /mydata/CS201Project/
+sudo unzip CS201-F24-Template-1.zip .
 ```
 
 ### Download and install LLVM
